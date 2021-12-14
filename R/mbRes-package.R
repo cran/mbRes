@@ -12,9 +12,11 @@
 #'
 #' @section Guidelines: ps-index is a new integrated index for multiple
 #'   biomarker responses. \code{\link{mbr}} is the main function to compute and
-#'   visualize the ps-index. The others are helper functions and are not meant
-#'   to be called directly by users. \code{\link{sokolova2021}} is provided as a
-#'   sample dataset.
+#'   visualize the ps-index. \code{\link{sokolova2021}} is provided as a sample
+#'   dataset. \code{\link{compare}} simulates a hypothetical dataset and compare
+#'   the results of ps-index and two other integrated indices published earlier.
+#'   The others are helper functions and are not meant to be called directly by
+#'   users.
 #'
 #' @section Copyright: mbRes: Integrating Multiple Biomarker Responses in
 #'   Aquatic Organisms using Effect Size, Statistical Uncertainty, and
@@ -29,20 +31,19 @@
 #'   the GNU General Public License along with mbRes.  If not, see
 #'   \url{https://www.gnu.org/licenses/}.
 #'
-#' @importFrom stats na.omit pnorm qnorm weighted.mean quantile sd
+#' @importFrom stats na.omit pnorm qnorm rnorm weighted.mean quantile sd
+#'   wilcox.test
 #' @importFrom magrittr %>% %$%
 #' @importFrom dplyr case_when select transmute mutate group_by summarise
-#'   rowwise dense_rank percent_rank min_rank ntile cume_dist
+#'   rowwise dense_rank percent_rank min_rank ntile cume_dist rename
 #' @importFrom purrr map
 #' @importFrom rlang sym
 #' @importFrom data.table rbindlist
-#' @importFrom ggplot2 ggplot aes geom_tile scale_x_discrete scale_y_discrete
-#'   scale_fill_manual labs theme element_text element_blank scale_fill_gradient
-#'   geom_text guide_colorbar rel geom_point scale_x_continuous
-#'   scale_y_continuous margin geom_col scale_fill_gradient2 guides
-#'   scale_y_reverse
 #' @importFrom cowplot theme_cowplot theme_minimal_hgrid theme_minimal_grid
-#'   plot_grid get_legend draw_label
+#'   plot_grid get_legend draw_label panel_border
 #' @importFrom grid unit
 #' @importFrom forcats fct_reorder
+#' @importFrom tidyr gather spread
+#' @importFrom tibble add_row
+#' @import ggplot2
 NULL

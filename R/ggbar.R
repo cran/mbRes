@@ -19,7 +19,8 @@ ggbar <- function(dat, hax, vax, sub, env = parent.frame()) {
     scale_x_discrete(name = NULL,
                      expand = c(0, 0),
                      position = "top") +
-    labs(title = "Ecological relevance", subtitle = paste("mean = ", round(sub, 2))) +
+    labs(title = "Ecological relevance") +
+    geom_hline(yintercept=sub, linetype="dashed") +
     theme_minimal_hgrid() +
     {
       if (env$rotate == TRUE)

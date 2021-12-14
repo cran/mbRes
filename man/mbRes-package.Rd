@@ -12,9 +12,11 @@ biomarker responses, as described in Pham & Sokolova (2021, unpublished).
 \section{Guidelines}{
  ps-index is a new integrated index for multiple
   biomarker responses. \code{\link{mbr}} is the main function to compute and
-  visualize the ps-index. The others are helper functions and are not meant
-  to be called directly by users. \code{\link{sokolova2021}} is provided as a
-  sample dataset.
+  visualize the ps-index. \code{\link{sokolova2021}} is provided as a sample
+  dataset. \code{\link{compare}} simulates a hypothetical dataset and compare
+  the results of ps-index and two other integrated indices published earlier.
+  The others are helper functions and are not meant to be called directly by
+  users.
 }
 
 \section{Copyright}{

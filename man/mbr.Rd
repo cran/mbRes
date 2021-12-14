@@ -20,7 +20,7 @@ the ecological relevance as the second column.}
 }
 \value{
 \code{mbr} returns a list of length 4: \item{\code{input}}{a list of
-  3 \describe{ \item{\code{main}}{the input biomarker data frame}
+  length 3 \describe{ \item{\code{main}}{the input biomarker data frame}
   \item{\code{extra}}{a data frame with 2 columns:\describe{
   \item{\code{biomarker}}{individual biomarker} \item{\code{eco}}{the input
   ecological relevance} }} \item{\code{eco.mean}}{the mean ecological
