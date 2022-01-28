@@ -45,5 +45,7 @@
 #' @importFrom forcats fct_reorder
 #' @importFrom tidyr gather spread
 #' @importFrom tibble add_row
+#' @importFrom ggforce geom_sina
+#'@importFrom utils data
 #' @import ggplot2
 NULL

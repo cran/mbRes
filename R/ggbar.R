@@ -15,12 +15,12 @@
 ggbar <- function(dat, hax, vax, sub, env = parent.frame()) {
   ggplot(dat, aes(x = !!sym(hax), y = !!sym(vax))) +
     geom_col(fill = "#009E73", alpha = 0.9) +
-    scale_y_reverse(name = NULL) +
+    scale_y_reverse(name = NULL, breaks = seq(0, 100, by = 1)) +
     scale_x_discrete(name = NULL,
                      expand = c(0, 0),
                      position = "top") +
     labs(title = "Ecological relevance") +
-    geom_hline(yintercept=sub, linetype="dashed") +
+    # geom_hline(yintercept=sub, linetype="dashed") +
     theme_minimal_hgrid() +
     {
       if (env$rotate == TRUE)
