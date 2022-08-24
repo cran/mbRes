@@ -4,7 +4,7 @@
 \alias{resampling}
 \title{Measure Statistical Uncertainty}
 \usage{
-resampling(v1, v0, nrand = 1999, nboot = 1999, conf.level = 0.95, seed = 1)
+resampling(v1, v0, nrand = 1999, seed = 1)
 }
 \arguments{
 \item{v1}{a vector, biomarker values from the treatment group.}
@@ -14,32 +14,26 @@ resampling(v1, v0, nrand = 1999, nboot = 1999, conf.level = 0.95, seed = 1)
 \item{nrand}{an integer, the number of randomization samples. The default
 value is 1999.}
 
-\item{nboot}{an integer, the number of bootstrap samples. The default value
-is 1999.}
-
-\item{conf.level}{a numeric, the confidence level to calculate percentile
-bootstrap confidence interval. The default value is 0.95.}
-
 \item{seed}{an integer, the seed for random number generation. Setting a seed
 ensures the reproducibility of the result. See \code{\link{set.seed}} for
 more details.}
 }
 \value{
-\code{resampling} returns a one-row data frame with four numerics:
+\code{resampling} returns a one-row data frame with 3 numerics:
   \item{\code{delta}}{the Cliff's delta of the treatment group.}
   \item{\code{pval}}{the observed P-value p under the null hypothesis.}
   \item{\code{sval}}{the S-value s calculated from P-value p.}
-  \item{\code{se}}{the standard error of Cliff's delta.}
-  \item{\code{ci.lower}}{the lower bound of the confidence interval.}
-  \item{\code{ci.upper}}{the upper bound of the confidence interval.}
-  \item{\code{ciw}}{the width of the confidence interval.}
 }
 \description{
-\code{resampling} performs randomization test and bootstrapping to calculate
-P-value and percentile bootstrap confidence interval of Cliff's delta.
+\code{resampling} performs randomization test to calculate P-value and
+S-value.
 }
 \examples{
-resampling(unlist(sokolova2021[7:12, 2]), unlist(sokolova2021[1:6, 2]))
+set.seed(1)
+setting <- setpop()
+temp <- simul(setting$pop_mean)
+resampling(subset(temp$sam, Site == "S1", Bmk1, drop = TRUE),
+subset(temp$sam, Site == "S0", Bmk1, drop = TRUE))
 
 }
 \references{
@@ -49,12 +43,7 @@ Greenland, S. (2019). Valid P-Values Behave Exactly as They
   \doi{10.1080/00031305.2018.1529625}. \cr \cr Phipson, B., & Smyth, G. K.
   (2010). Permutation P-values Should Never Be Zero: Calculating Exact
   P-values When Permutations Are Randomly Drawn. Statistical Applications in
-  Genetics and Molecular Biology, 9(1). \doi{10.2202/1544-6115.1585}. \cr \cr
-  Efron, B., & Tibshirani, R. (1993). An introduction to the bootstrap.
-  Chapman & Hall. \cr \cr Ruscio, J., & Mullen, T. (2012). Confidence
-  Intervals for the Probability of Superiority Effect Size Measure and the
-  Area Under a Receiver Operating Characteristic Curve. Multivariate
-  Behavioral Research, 47(2), 201–223. \doi{10.1080/00273171.2012.658329}.
+  Genetics and Molecular Biology, 9(1). \doi{10.2202/1544-6115.1585}.
 }
 \seealso{
 \code{\link[RProbSup]{A1}}.

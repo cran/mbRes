@@ -17,6 +17,6 @@ ggdot(dat, hax, vax)
 \code{ggdot} returns a ggplot object.
 }
 \description{
-\code{ggdot} creates dot plot of the ps-index. This is not meant to be
-called directly.
+\code{ggdot} creates dot plot of the average of absolute Cliff’s delta. This
+is not meant to be called directly.
 }

@@ -1,8 +1,7 @@
 #' Make Heatmap
 #'
-#' \code{ggheat} creates heatmaps of the Cliff's delta, surprisal, confidence
-#' interval width, and weighting factor. This is not meant to be called
-#' directly.
+#' \code{ggheat} creates heatmaps of the Cliff's delta and S-value. This is not
+#' meant to be called directly.
 #'
 #' @param dat a data frame with at least three columns.
 #' @param hax a character, name of the column to be used as the horizontal axis.

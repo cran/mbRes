@@ -2,28 +2,43 @@
 % Please edit documentation in R/compare.R
 \name{compare}
 \alias{compare}
-\title{Hypothetical Case Study Analysis}
+\title{Compare RSI, IBR, and Cliff's delta}
 \usage{
-compare()
+compare(sam, sam_mean)
+}
+\arguments{
+\item{sam}{a data frame, the first output of \code{\link{simul}}.}
+
+\item{sam_mean}{a data frame, the third output of \code{\link{simul}}.}
 }
 \value{
-\code{compare} returns a list of length 3: \item{\code{tab}}{a list
-  of length 9 \describe{ \item{\code{pop}}{the true population means of
-  normal distributions} \item{\code{pop_long}}{the true population means in
-  long format} \item{\code{sam}}{the sample dataset of biomarker responses}
-  \item{\code{sam_long}}{the sample dataset in long format}
-  \item{\code{m}}{mean biomarker responses by exposure group}
-  \item{\code{blaise2002}}{integrated index from an ordinalization method}
-  \item{\code{beliaeff2002}}{integrated index from a standardization method}
-  \item{\code{eco}}{assigned ecological relevance of biomarkers}
-  \item{\code{pham2021}}{ps-index from our estimation method} }}
-  \item{\code{fig}}{a list of 2 ggplot objects \describe{
-  \item{\code{fig_sam}}{hypothetical dataset}
-  \item{\code{fig_compare}}{result comparision of three methods} } }
-  \item{\code{est}}{full results of our estimation method given by
-  \code{mbr}}
+\code{compare} returns a list of length 5: \item{\code{blaise}}{RSI
+  assigned values and final RSI.} \item{\code{beliaeff}}{IBR translated
+  scores and final IBR.} \item{\code{pham}}{Cliff's delta and the average of
+  absolute Cliff’s delta.} \item{\code{fig1}}{ggplot object of comparisions
+  among RSI assigned values, IBR translated scores, and Cliff's delta.}
+  \item{\code{fig2}}{ggplot object of comparision among RSI, IBR, and the
+  average of absolute Cliff’s delta.}
 }
 \description{
-\code{compare} generates a hypothetical dataset of biomarker responses and
-analyzes the dataset using three different strategies.
+\code{compare} calculates RSI assigned values, IBR translated scores, and
+Cliff's delta in the hypothetical case study.
+}
+\examples{
+\donttest{
+set.seed(1)
+setting <- setpop()
+temp <- simul(setting$pop_mean)
+compare(temp$sam, temp$sam_mean)
+} #might take more than 5s in some machines
+
+}
+\references{
+Blaise, C., Gagné, F., Pellerin, J., Hansen, P.-D., & Trottier,
+  S. (2002). Molluscan shellfish biomarker study of the Quebec, Canada,
+  Saguenay Fjord with the soft-shell clam, Mya arenaria. Environmental
+  Toxicology, 17(3), 170–186. \doi{10.1002/tox.10048}.  \cr \cr Beliaeff, B.,
+  & Burgeot, T. (2002). Integrated biomarker response: A useful tool for
+  ecological risk assessment. Environmental Toxicology and Chemistry, 21(6),
+  1316–1322. \doi{10.1002/etc.5620210629}.
 }

@@ -42,7 +42,6 @@ ggheat(
 \code{ggheat} returns a ggplot object.
 }
 \description{
-\code{ggheat} creates heatmaps of the Cliff's delta, surprisal, confidence
-interval width, and weighting factor. This is not meant to be called
-directly.
+\code{ggheat} creates heatmaps of the Cliff's delta and S-value. This is not
+meant to be called directly.
 }

@@ -1,7 +1,7 @@
 #' Make Dot Plot
 #'
-#' \code{ggdot} creates dot plot of the ps-index. This is not meant to be
-#' called directly.
+#' \code{ggdot} creates dot plot of the average of absolute Cliff’s delta. This
+#' is not meant to be called directly.
 #'
 #' @param dat a data frame with at least two columns.
 #' @param hax a character, name of the column to be used as the horizontal axis.
@@ -11,7 +11,7 @@
 #'
 #' @export
 ggdot <- function(dat, hax, vax) {
-  ggplot(dat, aes(x = !!sym(hax), y = fct_reorder(!!sym(vax), !!sym(hax)))) +
+  ggplot(dat, aes(x = !!sym(hax), y = fct_reorder(!!sym(vax),!!sym(hax)))) +
     geom_point(
       pch = 21,
       fill = "#E69F00",
@@ -25,9 +25,9 @@ ggdot <- function(dat, hax, vax) {
       color = "#000000"
     ) +
     scale_x_continuous(name = NULL,
-                       limits = c(0,1)) +
+                       limits = c(0, 1)) +
     scale_y_discrete(name = NULL) +
-    labs(title = "ps-index") +
+    labs(title = "Average |Cliff's delta|") +
     theme_minimal_grid() +
     theme(plot.title = element_text(hjust = 0.5))
 }

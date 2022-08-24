@@ -3,35 +3,33 @@
 \docType{package}
 \name{mbRes-package}
 \alias{mbRes-package}
-\title{mbRes: Integrating Multiple Biomarker Responses in Aquatic Organisms using
-Effect Size, Statistical Uncertainty, and Ecological Relevance}
+\title{mbRes: Exploration of Multiple Biomarker Responses using Effect Size}
 \description{
-Compute and visualize the ps-index, a new integrated index for multiple
-biomarker responses, as described in Pham & Sokolova (2021, unpublished).
+Summarize multiple biomarker responses of aquatic organisms to contaminants
+using Cliff’s delta, as described in Pham & Sokolova (in press).
 }
 \section{Guidelines}{
- ps-index is a new integrated index for multiple
-  biomarker responses. \code{\link{mbr}} is the main function to compute and
-  visualize the ps-index. \code{\link{sokolova2021}} is provided as a sample
-  dataset. \code{\link{compare}} simulates a hypothetical dataset and compare
-  the results of ps-index and two other integrated indices published earlier.
-  The others are helper functions and are not meant to be called directly by
-  users.
+ \code{\link{mbr}} and \code{\link{visual}} are the main
+ functions to compute and visualize Cliff’s delta and S-value.
+ \code{\link{setpop}}, \code{\link{simul}}, and \code{\link{plotsam}}
+ simulate and visualize a hypothetical dataset. \code{\link{compare}}
+ compares the results of Cliff’s delta and two other integrated indices
+ published earlier (i.e., RSI and IBR). The others are helper functions and
+ are not meant to be called directly by users.
 }
 
 \section{Copyright}{
- mbRes: Integrating Multiple Biomarker Responses in
-  Aquatic Organisms using Effect Size, Statistical Uncertainty, and
-  Ecological Relevance. Copyright (C) 2021  Duy Nghia Pham & Inna M. Sokolova
-  \cr \cr mbRes is free software: you can redistribute it and/or modify it
-  under the terms of the GNU General Public License as published by the Free
-  Software Foundation, either version 3 of the License, or (at your option)
-  any later version. \cr \cr mbRes is distributed in the hope that it will be
-  useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
-  Public License for more details. \cr \cr You should have received a copy of
-  the GNU General Public License along with mbRes.  If not, see
-  \url{https://www.gnu.org/licenses/}.
+ mbRes: Exploration of Multiple Biomarker Responses using
+ Effect Size. \cr Copyright (C) 2021-2022  Duy Nghia Pham & Inna M. Sokolova
+ \cr \cr mbRes is free software: you can redistribute it and/or modify it
+ under the terms of the GNU General Public License as published by the Free
+ Software Foundation, either version 3 of the License, or (at your option)
+ any later version. \cr \cr mbRes is distributed in the hope that it will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+ Public License for more details. \cr \cr You should have received a copy of
+ the GNU General Public License along with mbRes.  If not, see
+ \url{https://www.gnu.org/licenses/}.
 }
 
 \author{

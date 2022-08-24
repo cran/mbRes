@@ -2,68 +2,47 @@
 % Please edit documentation in R/mbr.R
 \name{mbr}
 \alias{mbr}
-\title{Compute and Visualize ps-index}
+\title{Compute Cliff's delta and S-value}
 \usage{
-mbr(df, df2 = NULL, rotate = FALSE, display = TRUE)
+mbr(df)
 }
 \arguments{
 \item{df}{a data frame with the name of experimental groups or biomonitoring
 sites as the first column and the measurement of biomarkers as the
 remaining columns.}
-
-\item{df2}{a data frame with the name of biomarkers as the first column and
-the ecological relevance as the second column.}
-
-\item{rotate}{a logical, whether to rotate the biomarker labels in figures.}
-
-\item{display}{a logical, whether to display cell values in heatmaps.}
 }
 \value{
-\code{mbr} returns a list of length 4: \item{\code{input}}{a list of
-  length 3 \describe{ \item{\code{main}}{the input biomarker data frame}
-  \item{\code{extra}}{a data frame with 2 columns:\describe{
-  \item{\code{biomarker}}{individual biomarker} \item{\code{eco}}{the input
-  ecological relevance} }} \item{\code{eco.mean}}{the mean ecological
-  relevance} }}\item{\code{es}}{a data frame with 14 columns:\describe{
-  \item{\code{treatment}}{treatment groups or test sites}
-  \item{\code{control}}{control group or reference site}
-  \item{\code{tm_size}}{the sample size of treatment group}
-  \item{\code{ct_size}}{the sample size of control group}
-  \item{\code{biomarker}}{individual biomarker} \item{\code{delta}}{the
-  Cliff's delta of treatment group} \item{\code{delta.abs}}{the absolute
-  Cliff's delta} \item{\code{pval}}{the P-Value} \item{\code{sval}}{the
-  surprisal or S-Value} \item{\code{se}}{the standard error of Cliff's delta}
-  \item{\code{ci.lower}}{the lower bound of the confidence interval}
-  \item{\code{ci.upper}}{the uppper bound of the confidence interval}
-  \item{\code{ciw}}{the width of the confidence interval}
-  \item{\code{eco}}{the ecological relevance of the biomarker}
-  \item{\code{sval.cdf}}{the ascending rank of S-value by CDF method, see
-  \code{\link{cume_dist}}} \item{\code{ciw.cdf}}{the descending rank of
-  confidence interval width by CDF method} \item{\code{eco.cdf}}{the
-  ascending rank of ecological relevance by CDF method}
-  \item{\code{weight}}{the total weighting factor}}} \item{\code{idx}}{a data
-  frame with 2 columns:\describe{ \item{\code{treatment}}{treatment groups or
-  test sites} \item{\code{ps}}{the ps-index} }} \item{\code{fig}}{a list of 6
-  ggplot objects\describe{ \item{\code{delta}}{the Cliff's delta}
-  \item{\code{sval}}{the surprisal or S-value} \item{\code{ciw}}{confidence
-  interval width} \item{\code{eco}}{the ecological relevance}
-  \item{\code{weight}}{the weighting factor} \item{\code{ps}}{the ps-index}
-  }}
+\code{mbr} returns a list of length 3: \item{\code{mess}}{a list of
+  length 3 confirms the information about \code{df}.}\item{\code{es}}{a data
+  frame with 9 columns:\describe{ \item{\code{test_site}}{treatment groups or
+  test sites.} \item{\code{ref_site }}{control group or reference site.}
+  \item{\code{t_size }}{the sample size of treatment group or test sites.}
+  \item{\code{r_size }}{the sample size of control group or reference site.}
+  \item{\code{biomarker}}{individual biomarker.} \item{\code{delta}}{the
+  Cliff's delta of treatment group or reference site.}
+  \item{\code{delta.abs}}{the absolute Cliff's delta.} \item{\code{pval}}{the
+  P-Value.} \item{\code{sval}}{the surprisal or S-Value.}}}
+  \item{\code{idx}}{a data frame summarizes \code{delta.abs} and their
+  average.}
 }
 \description{
-\code{mbr} calculates the ps-index and visualizes the whole process.
+\code{mbr} summarizes Cliff's delta and S-value for multiple groups and
+multiple biomarkers.
 }
 \details{
 The header of the first column can be any character, for example,
   'group' or 'site'. The first name appearing in the first column will
   determine the control group or the reference site. The other names will be
   treatment groups or test sites. The header of the remaining columns will
-  define the list of biomarkers. \cr \cr The row order of biomarkers in
-  \code{df2} must match the column order of biomarkers in \code{df}. If
-  \code{df2} is missing, all biomarkers automatically have ecological
-  relevance of only 1.
+  define the list of biomarkers.
 }
 \examples{
-\donttest{mbr(sokolova2021, ecorelevance, rotate = TRUE)} #might take more than 5s in some machines
+
+\donttest{
+set.seed(1)
+setting <- setpop()
+temp <- simul(setting$pop_mean)
+mbr(temp$sam)
+} #might take more than 5s in some machines
 
 }
