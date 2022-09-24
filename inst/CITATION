@@ -1,0 +1,14 @@
+citHeader("To cite mbRes in publications use:")
+
+citEntry(
+  entry    = "Article",
+  title    = "Dissecting integrated indices of multiple biomarker responses: Think before use",
+  author   = c(person("Duy Nghia", "Pham"), person("Inna M.", "Sokolova")),
+  journal  = "Integrated Environmental Assessment and Management",
+  year     = "2022",
+  doi      = "10.1002/ieam.4676",
+  textVersion = paste(
+"Pham, D. N., & Sokolova, I. M. (2022). Dissecting integrated indices of multiple biomarker responses: Think before use. Integrated Environmental Assessment and Management, ieam.4676. https://doi.org/10.1002/ieam.4676
+"
+  )
+)

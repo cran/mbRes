@@ -1,4 +1,4 @@
-7cb4d44dece31cf58386a5b927b8bb8a *DESCRIPTION
+31e14cc780a7b3e049990fdc7b27459a *DESCRIPTION
 c8fe66373588316862f6e9866315c75a *NAMESPACE
 7422248185abb28471d3116e00235522 *R/beliaeff2002.R
 35a0d0cdb2485a58edd7324821c7c99c *R/blaise2002.R
@@ -6,7 +6,7 @@ c8fe66373588316862f6e9866315c75a *NAMESPACE
 e07788bec52a7891d78a81f5c4718f6c *R/compare.R
 1c66b05f8bd162adebb3399993b3f6dc *R/ggdot.R
 d146c4cd24b6d9cc347c385c2b08f0dd *R/ggheat.R
-07375ccfc1220bb111e9110a5a7a2105 *R/mbRes-package.R
+1e5ae1f1433b9efa7ca88075c30acb17 *R/mbRes-package.R
 334292b1a21ba180ef553e3babeebd0b *R/mbr.R
 a45cc666f0b950896dccc33d136a6346 *R/plotsam.R
 d75a4ab047c88bb5a100b0e57487c0e0 *R/resampling.R
@@ -15,6 +15,7 @@ b51d46f3446c64000467fa4f44e70491 *R/simul.R
 2e2ace7c5c7fce6a396355e0452807a5 *R/visual.R
 a4d5cb8a381e398b4bad96e8ea93dc8c *R/zzz.R
 afbe4209b3bb961ba3e41cbfe79ea507 *build/partial.rdb
+87e94ec4379270b60c3c24c97331bb0f *inst/CITATION
 b4b6f6ebd70f4c675d09534e7cd16e34 *man/beliaeff2002.Rd
 8ff6bbcc664317981ad937be9abc6e8a *man/blaise2002.Rd
 3df8eb2eccbb476acf9485fd43a285fa *man/cliff.Rd
@@ -22,7 +23,7 @@ bfb4d4646582ad6f7219ff19a572ebae *man/compare.Rd
 c8dd8ce35c54244a3a7a3ac76ce6af82 *man/figures/logo.png
 0cdb644283a84011a915b89ea92e8e39 *man/ggdot.Rd
 bc674098bab0af8811403f0789cc1075 *man/ggheat.Rd
-b9ab76dc1da6239da509cbe77c75e85b *man/mbRes-package.Rd
+c57a5600cea20ccaee888afa0952d148 *man/mbRes-package.Rd
 0a9848d9b24e357944e6709a72f4bd19 *man/mbr.Rd
 b50fba00c1b43f5ae8ff2268e7942e2c *man/plotsam.Rd
 62b3d700b6c45f83bc97603a8f3a271f *man/resampling.Rd
