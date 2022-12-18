@@ -2,7 +2,7 @@
 #'
 #'Summarize multiple biomarker responses of aquatic organisms to contaminants
 #'using Cliff’s delta, as described in Pham & Sokolova (2022)
-#'<doi:10.1002/ieam.4676>.
+#'\doi{10.1002/ieam.4676}.
 #'
 #'@author Duy Nghia Pham & Inna M. Sokolova
 #'
@@ -11,12 +11,18 @@
 #'@name mbRes-package
 #'
 #'@section Guidelines: \code{\link{mbr}} and \code{\link{visual}} are the main
-#'  functions to compute and visualize Cliff’s delta and S-value.
+#'  functions to compute and visualize Cliff’s delta and S-value which are
+#'  results of \code{\link{cliff}} and \code{\link{resampling}}.
 #'  \code{\link{setpop}}, \code{\link{simul}}, and \code{\link{plotsam}}
 #'  simulate and visualize a hypothetical dataset. \code{\link{compare}}
 #'  compares the results of Cliff’s delta and two other integrated indices
-#'  published earlier (i.e., RSI and IBR). The others are helper functions and
-#'  are not meant to be called directly by users.
+#'  published earlier (i.e., RSI and IBR, see \code{\link{blaise2002}} and
+#'  \code{\link{beliaeff2002}}). The others (\code{\link{ggheat}} and
+#'  \code{\link{ggdot}}) are helper functions and are not meant to be called
+#'  directly by users.
+#'
+#'@section Updates: \code{\link{mbr.cliff}} and \code{\link{mbr.glass}} simply
+#'  compute and visualize Cliff’s delta and Glass's delta.
 #'
 #'@section Copyright: mbRes: Exploration of Multiple Biomarker Responses using
 #'  Effect Size. \cr Copyright (C) 2021-2022 Duy Nghia Pham & Inna M. Sokolova
@@ -39,6 +45,7 @@
 #'@importFrom tidyr gather spread
 #'@importFrom purrr map reduce
 #'@importFrom data.table rbindlist
+#'@importFrom scales squish
 #'@import ggplot2 cowplot
 #'
 NULL

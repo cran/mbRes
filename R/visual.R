@@ -49,7 +49,7 @@ visual <- function(rs,
            "white",
            "#CC79A7")
 
-  fig.avg <- ggdot(rs$idx, "avg", "Site")
+  fig.avg <- ggdot(rs$idx, "avg", colnames(rs$idx)[1])
 
   mbr_fig <-
     plot_grid(
