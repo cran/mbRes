@@ -1,14 +1,23 @@
 citHeader("To cite mbRes in publications please use:")
 
-citEntry(
-  entry    = "Article",
+bibentry(
+  bibtype    = "Article",
   title    = "Dissecting integrated indices of multiple biomarker responses: Think before use",
-  author   = c(person("Duy Nghia", "Pham"), person("Inna M.", "Sokolova")),
-  journal  = "Integrated Environmental Assessment and Management",
-  year     = "2022",
-  doi      = "10.1002/ieam.4676",
+	volume = "19",
+	issn = "1551-3777, 1551-3793",
+	shorttitle = "Dissecting integrated indices of multiple biomarker responses",
+	url = "https://onlinelibrary.wiley.com/doi/10.1002/ieam.4676",
+	doi = "10.1002/ieam.4676",
+	language = "en",
+	number = "2",
+	urldate = "2023-02-28",
+	journal = "Integrated Environmental Assessment and Management",
+	author = "Pham Duy Nghia and Sokolova Inna M.",
+	month = "mar",
+	year = "2023",
+	pages = "302--311",
   textVersion = paste(
-"Pham, D. N., & Sokolova, I. M. (2022). Dissecting integrated indices of multiple biomarker responses: Think before use. Integrated Environmental Assessment and Management, ieam.4676. https://doi.org/10.1002/ieam.4676
+"Pham, D. N., & Sokolova, I. M. (2023). Dissecting integrated indices of multiple biomarker responses: Think before use. Integrated Environmental Assessment and Management, 19(2), 302–311. https://doi.org/10.1002/ieam.4676
 "
   )
 )

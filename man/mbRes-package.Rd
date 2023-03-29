@@ -6,7 +6,7 @@
 \title{mbRes: Exploration of Multiple Biomarker Responses using Effect Size}
 \description{
 Summarize multiple biomarker responses of aquatic organisms to contaminants
-using Cliff’s delta, as described in Pham & Sokolova (2022)
+using Cliff’s delta, as described in Pham & Sokolova (2023)
 \doi{10.1002/ieam.4676}.
 }
 \section{Guidelines}{
@@ -29,7 +29,7 @@ using Cliff’s delta, as described in Pham & Sokolova (2022)
 
 \section{Copyright}{
  mbRes: Exploration of Multiple Biomarker Responses using
- Effect Size. \cr Copyright (C) 2021-2022 Duy Nghia Pham & Inna M. Sokolova
+ Effect Size. \cr Copyright (C) 2021-2023 Duy Nghia Pham & Inna M. Sokolova
  \cr \cr mbRes is free software: you can redistribute it and/or modify it
  under the terms of the GNU General Public License as published by the Free
  Software Foundation, either version 3 of the License, or (at your option)
